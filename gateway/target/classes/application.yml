@@ -1,0 +1,7 @@
+server:
+  port: ${SERVER_PORT:32100}
+
+logging:
+  level:
+    root: INFO
+    org.hananaharonof: DEBUG
