@@ -10,9 +10,9 @@
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>gateway</artifactId>
+	<artifactId>risk-engine</artifactId>
 	<version>1.0.0</version>
-	<name>Payment Gateway</name>
+	<name>Payment Risk Engine</name>
 
  <dependencies>
 		<dependency>

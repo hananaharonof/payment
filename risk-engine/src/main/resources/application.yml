@@ -1,0 +1,16 @@
+server:
+  port: ${SERVER_PORT:32102}
+
+logging:
+  level:
+    root: INFO
+    org.hananaharonof: DEBUG
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.hananaharonof.payment.kafka.serializer.JavaDeserializer

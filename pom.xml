@@ -16,6 +16,8 @@
 		<module>gateway</module>
 		<module>db-master</module>
 		<module>client</module>
+		<module>risk-engine</module>
+		<module>kafka-common</module>
 	</modules>
 
 </project>
