@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 public class Payment implements Serializable {
 
     private String id;
-    private Double amount;
+    private double amount;
     private String currency;
     private String userId;
     private String payeeId;

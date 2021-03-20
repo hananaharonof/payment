@@ -13,7 +13,7 @@ public class RiskEngineService {
 
     @Autowired
     public RiskEngineService() {
-        this.paymentClient = ClientFactory.paymentClient("localhost", 32101);
+        this.paymentClient = ClientFactory.paymentClient();
     }
 
     public void createPayment(Payment payment) {

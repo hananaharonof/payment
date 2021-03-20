@@ -24,6 +24,7 @@
 		<jackson-core.version>2.11.4</jackson-core.version>
 		<feign.version>9.3.1</feign.version>
 		<spring-kafka.version>2.6.7</spring-kafka.version>
+		<commons-lang3.version>3.10</commons-lang3.version>
 	</properties>
 
 	<dependencyManagement>
@@ -62,6 +63,11 @@
 				<groupId>org.springframework.kafka</groupId>
 				<artifactId>spring-kafka</artifactId>
 				<version>${spring-kafka.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
