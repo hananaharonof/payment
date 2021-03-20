@@ -7,12 +7,8 @@ import org.springframework.stereotype.Component;
 public class IFeelLuckyRiskEvaluator implements RiskEvaluator {
 
     @Override
-    public boolean evaluate(Payment payment) {
-        return Math.random() <= 0.7;
+    public double evaluate(Payment payment) {
+        return Math.random();
     }
 
-    @Override
-    public int order() {
-        return 1;
-    }
 }

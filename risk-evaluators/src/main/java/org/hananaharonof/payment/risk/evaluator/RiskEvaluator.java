@@ -4,8 +4,6 @@ import org.hananaharonof.payment.model.Payment;
 
 public interface RiskEvaluator {
 
-    boolean evaluate(Payment payment);
-
-    int order();
+    double evaluate(Payment payment);
 
 }

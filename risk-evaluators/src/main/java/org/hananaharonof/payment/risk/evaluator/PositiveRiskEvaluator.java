@@ -7,12 +7,8 @@ import org.springframework.stereotype.Component;
 public class PositiveRiskEvaluator implements RiskEvaluator {
 
     @Override
-    public boolean evaluate(Payment payment) {
-        return true;
-    }
-
-    @Override
-    public int order() {
+    public double evaluate(Payment payment) {
         return 0;
     }
+
 }

@@ -25,14 +25,13 @@ public class RiskEngineService {
     @Autowired
     public RiskEngineService(List<RiskEvaluator> evaluators) {
         this.evaluators = evaluators;
-        this.evaluators.sort(Comparator.comparingInt(RiskEvaluator::order));
         this.paymentClient = ClientFactory.paymentClient();
         this.paymentStatusClient = ClientFactory.paymentStatusClient();
     }
 
     public void createPayment(Payment payment) {
         log.debug("Got new payment {} to process. Starting now...", payment.getId());
-        Optional<RiskEvaluator> rejected = evaluators.stream().filter(e -> !e.evaluate(payment)).findAny();
+        Optional<RiskEvaluator> rejected = evaluators.stream().filter(e -> e.evaluate(payment) > 0.7).findAny();
 
         if (rejected.isPresent()) {
             log.debug("Payment {} was rejected", payment.getId());
