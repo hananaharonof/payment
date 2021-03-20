@@ -18,6 +18,7 @@
 		<module>client</module>
 		<module>risk-engine</module>
 		<module>kafka-common</module>
+		<module>risk-evaluators</module>
 	</modules>
 
 </project>

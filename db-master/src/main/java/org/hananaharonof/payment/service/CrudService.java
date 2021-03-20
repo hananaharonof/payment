@@ -2,12 +2,13 @@ package org.hananaharonof.payment.service;
 
 import java.util.Optional;
 import java.util.function.Function;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.CrudRepository;
 
+@Slf4j
 public abstract class CrudService<T, R> {
 
     public Optional<T> read(String id) {
-        // TODO: add validations
         Optional<R> dao = repository().findById(id);
         if (dao.isPresent()) {
             return dao.map(toDto());
@@ -16,8 +17,8 @@ public abstract class CrudService<T, R> {
     }
 
     public void create(T item) {
-        // TODO: add validations
         repository().save(toDao().apply(item));
+        log.debug("Persisted new item: {}", item);
     }
 
     protected abstract CrudRepository<R, String> repository();

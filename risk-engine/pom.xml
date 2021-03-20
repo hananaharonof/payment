@@ -33,6 +33,11 @@
 		 <artifactId>kafka-common</artifactId>
 		 <version>1.0.0</version>
 	 </dependency>
+	 <dependency>
+		 <groupId>org.hananaharonof</groupId>
+		 <artifactId>risk-evaluators</artifactId>
+		 <version>1.0.0</version>
+	 </dependency>
 	</dependencies>
 
 	<build>

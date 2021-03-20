@@ -44,6 +44,10 @@ public class PaymentValidator {
             return Optional.of("Blank payee id");
         }
 
+        if (payment.getPayeeId().equals(payment.getUserId())) {
+            return Optional.of("User id must differ from payee id");
+        }
+
         return Optional.empty();
     }
 }

@@ -28,6 +28,10 @@ public class ClientFactory {
         return ClientFactory.create("paymentmethod", PaymentMethodClient.class);
     }
 
+    public static PaymentStatusClient paymentStatusClient() {
+        return ClientFactory.create("paymentstatus", PaymentStatusClient.class);
+    }
+
     public static UserClient userClient() {
         return ClientFactory.create("user", UserClient.class);
     }

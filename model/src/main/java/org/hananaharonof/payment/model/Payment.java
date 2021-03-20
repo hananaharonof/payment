@@ -1,18 +1,17 @@
 package org.hananaharonof.payment.model;
 
-import java.io.Serializable;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Payment implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class Payment extends BaseDto {
 
-    private String id;
     private double amount;
     private String currency;
     private String userId;
     private String payeeId;
     private String paymentMethodId;
-
 }

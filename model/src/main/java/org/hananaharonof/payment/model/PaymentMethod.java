@@ -1,11 +1,12 @@
 package org.hananaharonof.payment.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class PaymentMethod {
+@EqualsAndHashCode(callSuper = true)
+public class PaymentMethod extends BaseDto{
 
-    private String id;
 }
